@@ -1,0 +1,230 @@
+/* ==========================================================================
+   REGISTRATION GUIDELINES MODAL STYLES (PLATFORM WARM YELLOW SHADE)
+   ========================================================================== */
+
+.guidelines-modal-backdrop {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  background: rgba(15, 23, 42, 0.5) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px 16px !important;
+  box-sizing: border-box !important;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.guidelines-modal-container {
+  width: min(860px, 94vw) !important;
+  max-height: calc(100vh - 48px) !important;
+  background: #ffffff !important;
+  border-radius: 18px !important;
+  box-shadow: 0 25px 65px -12px rgba(0, 0, 0, 0.35) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  border: none !important;
+  outline: none !important;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Header: Platform Warm Gold/Yellow Tone */
+.guidelines-modal-header {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+  color: #ffffff !important;
+  padding: 16px 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.guidelines-header-icon {
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.guidelines-header-text h2 {
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.guidelines-header-text p {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 2px 0 0 !important;
+}
+
+/* Body */
+.guidelines-modal-body {
+  padding: 20px 24px !important;
+  max-height: calc(85vh - 200px) !important;
+  overflow-y: auto !important;
+  background: #ffffff !important;
+}
+
+.guidelines-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+.guideline-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 4px 0 !important;
+}
+
+.guideline-item-special {
+  background: #fefce8 !important;
+  border: 1px solid #fef08a !important;
+  border-left: 4px solid #eab308 !important;
+  padding: 10px 14px !important;
+  border-radius: 8px !important;
+}
+
+.guideline-num {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #cbd5e1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  color: #475569 !important;
+  background: #ffffff !important;
+  flex-shrink: 0 !important;
+}
+
+.guideline-num.dark {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  border-color: #d97706 !important;
+}
+
+.guideline-content {
+  font-size: 13.5px !important;
+  color: #334155 !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.guideline-content strong {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Agreement Strip */
+.guidelines-agreement-strip {
+  margin: 0 24px 14px !important;
+  padding: 12px 16px !important;
+  background: #fefce8 !important;
+  border: 1.5px solid #fef08a !important;
+  border-radius: 10px !important;
+}
+
+.guidelines-checkbox-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  cursor: pointer !important;
+}
+
+.guidelines-native-checkbox {
+  position: absolute !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.guidelines-custom-checkbox {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 6px !important;
+  border: 2px solid #ca8a04 !important;
+  background: #ffffff !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  transition: all 0.15s ease !important;
+  color: #ffffff !important;
+}
+
+.guidelines-custom-checkbox.checked {
+  background: #d97706 !important;
+  border-color: #d97706 !important;
+}
+
+.guidelines-agreement-text {
+  font-size: 12.5px !important;
+  color: #854d0e !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+/* Actions */
+.guidelines-actions {
+  padding: 12px 24px 18px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-top: 1px solid #f1f5f9 !important;
+  background: #fafaf9 !important;
+}
+
+.guidelines-proceed-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 32px !important;
+  border-radius: 9999px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.guidelines-proceed-btn.active {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.3) !important;
+}
+
+.guidelines-proceed-btn.active:hover {
+  background: #b45309 !important;
+  transform: translateY(-1px) !important;
+}
+
+.guidelines-proceed-btn.disabled {
+  background: #e2e8f0 !important;
+  color: #94a3b8 !important;
+  cursor: not-allowed !important;
+  opacity: 0.8 !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(14px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}

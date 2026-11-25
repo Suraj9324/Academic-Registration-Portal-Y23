@@ -1,0 +1,134 @@
+/* ==========================================================================
+   FACULTY DIRECTORY REFINED BORDERS & POLISHED TABLE STYLES (WARM GOLD)
+   ========================================================================== */
+.faculty-directory-page .admin-filter-bar {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
+  margin-bottom: 20px !important;
+  padding: 14px 18px !important;
+}
+
+.faculty-directory-page .admin-search-box {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  background: #fdfbf7 !important;
+  height: 40px !important;
+}
+
+.faculty-directory-page .admin-search-box:focus-within {
+  border-color: #d97706 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+}
+
+.faculty-directory-page .admin-filter-select {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  height: 40px !important;
+  background: #fdfbf7 !important;
+  font-size: 13px !important;
+  color: #1e293b !important;
+  padding: 0 12px !important;
+}
+
+.faculty-directory-page .admin-filter-select:focus {
+  border-color: #d97706 !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1) !important;
+}
+
+.faculty-directory-page .admin-table-container {
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.05) !important;
+  overflow: hidden !important;
+}
+
+.faculty-directory-page .admin-data-table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+.faculty-directory-page .admin-data-table thead {
+  background: #fefcf3 !important;
+  border-bottom: 2px solid #fde68a !important;
+}
+
+.faculty-directory-page .admin-data-table th {
+  padding: 14px 18px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #78716c !important;
+  border-right: 1px solid #f5ede1 !important;
+}
+
+.faculty-directory-page .admin-data-table th:last-child {
+  border-right: none !important;
+}
+
+.faculty-directory-page .admin-data-table td {
+  padding: 13px 18px !important;
+  font-size: 13px !important;
+  color: #1e293b !important;
+  border-bottom: 1px solid #f5ede1 !important;
+  border-right: 1px solid #faf8f3 !important;
+}
+
+.faculty-directory-page .admin-data-table td:last-child {
+  border-right: none !important;
+}
+
+.faculty-directory-page .admin-data-table tbody tr:hover {
+  background: #fffdf5 !important;
+}
+
+.faculty-directory-page .badge-component-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 6px !important;
+  background: #fefce8 !important;
+  border: 1.5px solid #fde68a !important;
+  color: #92400e !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+}
+
+.faculty-download-icon-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #1e293b !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05) !important;
+  transition: all 0.16s ease !important;
+}
+
+.faculty-download-icon-btn:hover {
+  background: #fefce8 !important;
+  border-color: #d97706 !important;
+  color: #92400e !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.15) !important;
+}
+
+.faculty-download-icon-btn:active {
+  transform: translateY(0) scale(0.97) !important;
+}
+
+.faculty-download-icon-btn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}

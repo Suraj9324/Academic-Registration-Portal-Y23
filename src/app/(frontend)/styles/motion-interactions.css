@@ -1,0 +1,338 @@
+/* ==========================================================================
+   SIGNATURE INTERACTION ENGINEERING & MOTION DESIGN SYSTEM
+   Preserves 100% of existing visual design, palette, surfaces, and spacing.
+   Elevates smoothness, responsiveness, feedback, and transitions.
+   ========================================================================== */
+
+:root {
+  /* Motion Duration Tokens */
+  --motion-instant: 120ms;
+  --motion-fast: 160ms;
+  --motion-standard: 220ms;
+  --motion-notice: 280ms;
+  --motion-overlay: 300ms;
+
+  /* Natural Commercial SaaS Easing Curves */
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --motion-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --motion-ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   1. KEYFRAME SPECIFICATIONS
+   -------------------------------------------------------------------------- */
+
+@keyframes smooth-page-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes smooth-tab-swap {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-backdrop-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes drawer-slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dropdown-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes badge-pop {
+  0% {
+    transform: scale(0.9);
+  }
+
+  60% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. PAGE & VIEW TRANSITIONS
+   -------------------------------------------------------------------------- */
+
+.page-transition {
+  animation: smooth-page-enter var(--motion-standard) var(--motion-ease) both !important;
+  will-change: opacity, transform;
+}
+
+.bucket-content,
+.preference-content,
+.credential-state,
+.admin-content-workspace {
+  animation: smooth-tab-swap var(--motion-fast) var(--motion-ease) both;
+}
+
+/* --------------------------------------------------------------------------
+   3. BUTTON & CLICKABLE MICRO-INTERACTIONS
+   -------------------------------------------------------------------------- */
+
+button,
+.primary-btn,
+.secondary-btn,
+.admin-primary-btn,
+.nav-item-btn,
+.admin-nav-item,
+.reset-action-pill,
+.summary-download-btn,
+.faculty-download-icon-btn,
+.admin-action-btn {
+  transition: transform var(--motion-instant) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease) !important;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+button:active:not(:disabled),
+.primary-btn:active:not(:disabled),
+.secondary-btn:active:not(:disabled),
+.admin-primary-btn:active:not(:disabled),
+.reset-action-pill:active:not(:disabled),
+.summary-download-btn:active:not(:disabled) {
+  transform: scale(0.985) !important;
+}
+
+button:disabled,
+.primary-btn:disabled,
+.secondary-btn:disabled {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  transform: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION & TAB SWITCHING
+   -------------------------------------------------------------------------- */
+
+.nav-item-btn {
+  position: relative;
+  transition: color var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease) !important;
+}
+
+.nav-item-btn:hover {
+  transform: none !important;
+}
+
+.nav-item-btn.active svg {
+  transition: color var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease) !important;
+}
+
+.nav-item-badge {
+  transition: background-color var(--motion-fast) var(--motion-ease),
+    color var(--motion-fast) var(--motion-ease) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. CARDS & SELECTION CONTROLS
+   -------------------------------------------------------------------------- */
+
+.cluster-card,
+.subject-card,
+.preference-select-card,
+.admin-stat-pill-card,
+.metric-pill,
+.metric-chip,
+.pref-cell-filled {
+  transition: border-color var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease),
+    transform var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease) !important;
+  will-change: transform, box-shadow;
+}
+
+.cluster-card:active,
+.subject-card:active {
+  transform: scale(0.99) !important;
+}
+
+.cluster-radio-indicator {
+  transition: all var(--motion-fast) var(--motion-ease) !important;
+}
+
+.cluster-radio-indicator.is-selected {
+  animation: badge-pop var(--motion-standard) var(--motion-ease-spring) both;
+}
+
+.card-radio-mark {
+  transition: all var(--motion-fast) var(--motion-ease) !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. INPUTS & FORM CONTROLS
+   -------------------------------------------------------------------------- */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+select,
+textarea,
+.admin-text-input,
+.pref-native-select,
+.admin-filter-select {
+  transition: border-color var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease) !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.admin-text-input:focus,
+.pref-native-select:focus,
+.admin-filter-select:focus {
+  transition: border-color var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease) !important;
+}
+
+/* DatePicker Trigger smoothness */
+.date-trigger {
+  transition: border-color var(--motion-fast) var(--motion-ease),
+    box-shadow var(--motion-fast) var(--motion-ease),
+    background-color var(--motion-fast) var(--motion-ease) !important;
+}
+
+.date-trigger:active {
+  transform: scale(0.995);
+}
+
+.calendar-layer {
+  animation: modal-backdrop-in var(--motion-fast) var(--motion-ease) both !important;
+}
+
+.calendar-popover {
+  animation: dropdown-pop var(--motion-fast) var(--motion-ease) both !important;
+  transform-origin: top center;
+}
+
+/* --------------------------------------------------------------------------
+   7. DIALOGS, MODALS & DRAWERS
+   -------------------------------------------------------------------------- */
+
+.admin-modal-backdrop,
+.modal-backdrop-centered,
+.student-detail-drawer-scrim {
+  animation: modal-backdrop-in var(--motion-fast) var(--motion-ease) both !important;
+}
+
+.admin-modal,
+.admin-confirm-dialog {
+  animation: modal-enter var(--motion-standard) var(--motion-ease) both !important;
+  transform-origin: center center;
+}
+
+.student-detail-drawer {
+  animation: modal-enter var(--motion-standard) var(--motion-ease) both !important;
+  transform-origin: center center;
+}
+
+/* --------------------------------------------------------------------------
+   8. TABLE ROWS & DATA UPDATES
+   -------------------------------------------------------------------------- */
+
+.summary-table tbody tr,
+.admin-data-table tbody tr,
+.admin-table-wrap tbody tr {
+  transition: background-color var(--motion-fast) var(--motion-ease),
+    border-color var(--motion-fast) var(--motion-ease) !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. ACCESSIBILITY: PREFERS-REDUCED-MOTION
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. UNIVERSAL CAPITALIZATION (FIRST LETTER UPPERCASE, SUBSEQUENT LOWERCASE)
+   -------------------------------------------------------------------------- */
+.capitalize-words,
+.admin-cell-user strong,
+.admin-cell-course strong,
+.brand strong,
+.portal-title strong,
+.drawer-title-group h2,
+.ranked-faculty-card strong,
+.sub-ranked-chip strong,
+.summary-subject-name strong,
+.pref-details strong,
+.overview-main-col strong,
+.cluster-card strong,
+.faculty-directory-page .admin-data-table td strong {
+  text-transform: capitalize;
+}
